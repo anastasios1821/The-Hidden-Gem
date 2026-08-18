@@ -14,12 +14,12 @@
     body {
       font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
       line-height: 1.6;
-      color: #e8e6e3;
-      background: #121212;
+      color: #e5e7eb;
+      background: #0f172a;
     }
 
     header {
-      background: linear-gradient(135deg, #0d1b2a, #1b2838);
+      background: linear-gradient(135deg, #0f172a, #1e293b);
       color: white;
       text-align: center;
       padding: 60px 20px 50px;
@@ -30,41 +30,41 @@
       font-weight: 700;
       letter-spacing: -0.5px;
       margin-bottom: 12px;
-      color: #f0e6d2;
+      color: #93c5fd;
     }
 
     header p {
       font-size: 1.15rem;
-      opacity: 0.85;
+      opacity: 0.9;
       max-width: 600px;
       margin: 0 auto;
-      color: #d6d0c4;
+      color: #cbd5e1;
     }
 
     .container {
       max-width: 800px;
       margin: 0 auto;
-      padding: 40px 20px;
+      padding: 40px 20px 60px;
     }
 
     .intro, .booking, .stop {
-      background: #1e1e1e;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-      margin-bottom: 30px;
-      border: 1px solid #2a2a2a;
+      background: #1e293b;
+      padding: 28px;
+      border-radius: 14px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.35);
+      margin-bottom: 28px;
+      border: 1px solid #334155;
     }
 
     .intro h2, .booking h2, .stop h3 {
-      color: #e8d5a3;
-      margin-bottom: 15px;
-      font-size: 1.5rem;
+      color: #93c5fd;
+      margin-bottom: 14px;
+      font-size: 1.45rem;
     }
 
     .intro p {
-      margin-bottom: 16px;
-      color: #d1cdc7;
+      margin-bottom: 15px;
+      color: #cbd5e1;
     }
 
     .intro p:last-child {
@@ -74,8 +74,8 @@
     .photos {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 15px;
-      margin-bottom: 40px;
+      gap: 14px;
+      margin-bottom: 36px;
     }
 
     .photos img {
@@ -83,11 +83,11 @@
       height: 220px;
       object-fit: cover;
       border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
     }
 
     .stop {
-      border-left: 5px solid #c9a227;
+      border-left: 5px solid #3b82f6;
       padding: 25px;
     }
 
@@ -98,49 +98,51 @@
 
     .stop .meta {
       font-size: 0.9rem;
-      color: #a8a29e;
+      color: #94a3b8;
       margin-bottom: 12px;
     }
 
     .stop p {
-      color: #d1cdc7;
+      color: #cbd5e1;
     }
 
     .stop a {
-      color: #e8d5a3;
+      color: #93c5fd;
       text-decoration: underline;
     }
 
     .schedule {
-      margin: 20px 0;
-      padding-left: 5px;
+      margin: 18px 0 22px;
     }
 
     .schedule p {
       margin-bottom: 8px;
-      color: #d1cdc7;
+      color: #cbd5e1;
     }
 
     .email-btn {
-      display: inline-block;
-      margin-top: 20px;
-      background: #c9a227;
-      color: #1a1a1a;
-      padding: 13px 28px;
-      border-radius: 8px;
+      display: block;
+      width: 100%;
+      text-align: center;
+      margin-top: 8px;
+      background: #3b82f6;
+      color: white;
+      padding: 14px 20px;
+      border-radius: 10px;
       text-decoration: none;
       font-weight: 600;
+      font-size: 1rem;
       transition: background 0.2s;
     }
 
     .email-btn:hover {
-      background: #e0b83a;
+      background: #2563eb;
     }
 
     footer {
       text-align: center;
-      padding: 40px 20px;
-      color: #8a8580;
+      padding: 30px 20px 50px;
+      color: #64748b;
       font-size: 0.95rem;
     }
 
@@ -152,7 +154,10 @@
         grid-template-columns: 1fr;
       }
       .photos img {
-        height: 250px;
+        height: 240px;
+      }
+      .container {
+        padding: 30px 16px 50px;
       }
     }
   </style>
