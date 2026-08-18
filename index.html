@@ -45,15 +45,15 @@
       padding: 40px 20px;
     }
 
-    .intro {
+    .intro, .booking, .stop {
       background: white;
       padding: 30px;
       border-radius: 12px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
 
-    .intro h2 {
+    .intro h2, .booking h2, .stop h3 {
       color: #0d3b66;
       margin-bottom: 15px;
       font-size: 1.5rem;
@@ -83,17 +83,13 @@
     }
 
     .stop {
-      background: white;
-      border-radius: 12px;
-      padding: 25px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
       border-left: 5px solid #c9a227;
+      padding: 25px;
     }
 
     .stop h3 {
-      color: #0d3b66;
-      margin-bottom: 8px;
       font-size: 1.3rem;
+      margin-bottom: 8px;
     }
 
     .stop .meta {
@@ -102,8 +98,29 @@
       margin-bottom: 12px;
     }
 
-    .stop p {
-      color: #333;
+    .schedule {
+      margin: 20px 0;
+      padding-left: 5px;
+    }
+
+    .schedule p {
+      margin-bottom: 8px;
+    }
+
+    .email-btn {
+      display: inline-block;
+      margin-top: 20px;
+      background: #0d3b66;
+      color: white;
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+
+    .email-btn:hover {
+      background: #1a5f9e;
     }
 
     footer {
@@ -158,6 +175,23 @@
       <h3>1. Starting Point</h3>
       <div class="meta">Duration: 2 hours</div>
       <p>In front of Adams Hotel, the green benches (Afroditis 9, Athens 105 58)</p>
+    </div>
+
+    <!-- Booking Section -->
+    <div class="booking">
+      <h2>Booking & Schedule</h2>
+      
+      <div class="schedule">
+        <p><strong>September</strong> — Every day at 17:00</p>
+        <p><strong>1–15 October</strong> — 16:00</p>
+        <p><strong>16–31 October</strong> — 15:30</p>
+      </div>
+
+      <p>To book your place, please send an email to:</p>
+      
+      <a href="mailto:hidden.gem.walking.tour@gmail.com" class="email-btn">
+        hidden.gem.walking.tour@gmail.com
+      </a>
     </div>
 
   </div>
