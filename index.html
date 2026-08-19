@@ -201,10 +201,8 @@
       e.preventDefault();
       
       if (isMobile) {
-        // Mobile → open normal email app
         window.location.href = 'mailto:hidden.gem.walking.tour@gmail.com';
       } else {
-        // Computer → open Gmail in browser
         window.open('https://mail.google.com/mail/?view=cm&fs=1&to=hidden.gem.walking.tour@gmail.com', '_blank');
       }
     });
