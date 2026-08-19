@@ -115,6 +115,7 @@
       border-radius: 10px;
       text-decoration: none;
       font-weight: 600;
+      cursor: pointer;
     }
 
     footer {
@@ -181,18 +182,9 @@
 
       <p>To book your place, simply send me an email and I will get back to you shortly.</p>
      
-      <a href="mailto:hidden.gem.walking.tour@gmail.com" class="email-btn">
+      <a href="#" id="emailBtn" class="email-btn">
         hidden.gem.walking.tour@gmail.com
       </a>
-
-      <p style="margin-top: 12px; font-size: 0.9rem; color: #94a3b8; text-align: center;">
-        On computer? 
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hidden.gem.walking.tour@gmail.com" 
-           target="_blank" 
-           style="color: #e2c98a; text-decoration: underline;">
-          Open in Gmail
-        </a>
-      </p>
     </div>
 
   </div>
@@ -200,6 +192,23 @@
   <footer>
     Created by Alex · Athens
   </footer>
+
+  <script>
+    const emailBtn = document.getElementById('emailBtn');
+    const isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
+
+    emailBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      if (isMobile) {
+        // Mobile → open normal email app
+        window.location.href = 'mailto:hidden.gem.walking.tour@gmail.com';
+      } else {
+        // Computer → open Gmail in browser
+        window.open('https://mail.google.com/mail/?view=cm&fs=1&to=hidden.gem.walking.tour@gmail.com', '_blank');
+      }
+    });
+  </script>
 
 </body>
 </html>
