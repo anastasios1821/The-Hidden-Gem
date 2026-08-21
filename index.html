@@ -106,6 +106,17 @@
       outline: none;
       border-color: #c9a227;
     }
+
+    /* Make the calendar icon more visible */
+    input[type="date"] {
+      color-scheme: dark;
+    }
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      filter: invert(1);
+      cursor: pointer;
+      opacity: 0.9;
+    }
+
     .submit-btn {
       display: block;
       width: 100%;
@@ -122,6 +133,11 @@
     }
     .submit-btn:hover {
       background: #e2c98a;
+    }
+    .booking-note {
+      color: #94a3b8;
+      font-size: 0.95rem;
+      margin-bottom: 18px;
     }
     footer {
       text-align: center;
@@ -175,6 +191,7 @@
 
     <div class="booking">
       <h2>Book your place</h2>
+      <p class="booking-note">I will get back to you shortly after you send the request.</p>
     
       <div class="schedule">
         <p><strong>September</strong> — Every day at 17:00</p>
