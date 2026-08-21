@@ -30,6 +30,16 @@
       display: block;
       margin: 0;
     }
+
+    /* Make logo shorter only on laptop/desktop */
+    @media (min-width: 768px) {
+      .logo {
+        max-height: 320px;
+        object-fit: contain;
+        margin: 0 auto;
+      }
+    }
+
     .container {
       max-width: 800px;
       margin: 0 auto;
