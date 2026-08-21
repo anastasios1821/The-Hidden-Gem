@@ -82,7 +82,31 @@
     .schedule p {
       margin-bottom: 7px;
     }
-    .email-btn {
+    .form-group {
+      margin-bottom: 16px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      color: #e2c98a;
+      font-size: 0.95rem;
+    }
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 8px;
+      border: 1px solid #475569;
+      background: #0f172a;
+      color: #e2e8f0;
+      font-size: 1rem;
+    }
+    .form-group input:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: #c9a227;
+    }
+    .submit-btn {
       display: block;
       width: 100%;
       text-align: center;
@@ -90,9 +114,14 @@
       color: #0f172a;
       padding: 14px 20px;
       border-radius: 10px;
-      text-decoration: none;
+      border: none;
       font-weight: 600;
+      font-size: 1.05rem;
       cursor: pointer;
+      margin-top: 10px;
+    }
+    .submit-btn:hover {
+      background: #e2c98a;
     }
     footer {
       text-align: center;
@@ -145,37 +174,56 @@
     </div>
 
     <div class="booking">
-      <h2>Booking & Schedule</h2>
+      <h2>Book your place</h2>
     
       <div class="schedule">
         <p><strong>September</strong> — Every day at 17:00</p>
         <p><strong>October 1st–15th</strong> — at 16:00</p>
         <p><strong>October 16th–31st</strong> — at 15:30</p>
       </div>
-      <p>To book your place, simply send me an email and I will get back to you shortly.</p>
-    
-      <a href="#" id="emailBtn" class="email-btn">
-        hidden.gem.walking.tour@gmail.com
-      </a>
+
+      <form action="https://formspree.io/f/xoeargjd" method="POST">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="date">Preferred Date</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+
+        <div class="form-group">
+          <label for="people">Number of People</label>
+          <select id="people" name="people" required>
+            <option value="">Select...</option>
+            <option value="1">1 person</option>
+            <option value="2">2 people</option>
+            <option value="3">3 people</option>
+            <option value="4">4 people</option>
+            <option value="5">5 people</option>
+            <option value="6">6 people</option>
+            <option value="7+">7 or more</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message (optional)</label>
+          <input type="text" id="message" name="message" placeholder="Any special request?">
+        </div>
+
+        <button type="submit" class="submit-btn">Send Booking Request</button>
+      </form>
     </div>
   </div>
 
   <footer>
     Created by Alex · Athens
   </footer>
-
-  <script>
-    const emailBtn = document.getElementById('emailBtn');
-    const isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
-    emailBtn.addEventListener('click', function(e) {
-      e.preventDefault();
-     
-      if (isMobile) {
-        window.location.href = 'mailto:hidden.gem.walking.tour@gmail.com';
-      } else {
-        window.open('https://mail.google.com/mail/?view=cm&fs=1&to=hidden.gem.walking.tour@gmail.com', '_blank');
-      }
-    });
-  </script>
 </body>
 </html>
