@@ -107,14 +107,18 @@
       border-color: #c9a227;
     }
 
-    /* Make the calendar icon more visible */
+    /* Better calendar icon */
     input[type="date"] {
       color-scheme: dark;
+      position: relative;
     }
     input[type="date"]::-webkit-calendar-picker-indicator {
-      filter: invert(1);
+      background-color: #c9a227;
+      padding: 6px;
+      border-radius: 4px;
       cursor: pointer;
-      opacity: 0.9;
+      opacity: 1;
+      filter: none;
     }
 
     .submit-btn {
