@@ -145,6 +145,10 @@
     .submit-btn:hover {
       background: #e2c98a;
     }
+    .submit-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
     .booking-note {
       color: #94a3b8;
       font-size: 0.95rem;
@@ -210,7 +214,7 @@
         <p><strong>October 16th–31st</strong> — at 15:30</p>
       </div>
 
-      <form action="https://formspree.io/f/xoeargjd" method="POST">
+      <form id="bookingForm" action="https://formspree.io/f/xoeargjd" method="POST">
         <div class="form-group">
           <label for="name">Your Name</label>
           <input type="text" id="name" name="name" required>
@@ -245,7 +249,7 @@
           <input type="text" id="message" name="message" placeholder="Any special request?">
         </div>
 
-        <button type="submit" class="submit-btn">Send Booking Request</button>
+        <button type="submit" class="submit-btn" id="submitBtn">Send Booking Request</button>
       </form>
     </div>
   </div>
@@ -253,5 +257,42 @@
   <footer>
     Created by Alex · Athens
   </footer>
+
+  <script>
+    const form = document.getElementById('bookingForm');
+    const submitBtn = document.getElementById('submitBtn');
+
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          // Redirect to your own thank-you page
+          window.location.href = 'thank-you.html';
+        } else {
+          alert('Something went wrong. Please try again or email me directly.');
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send Booking Request';
+        }
+      } catch (error) {
+        alert('Something went wrong. Please try again or email me directly.');
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Booking Request';
+      }
+    });
+  </script>
 </body>
 </html>
