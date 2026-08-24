@@ -101,31 +101,28 @@
       color: #cbd5e1;
       margin-bottom: 20px;
     }
-    .review-buttons {
+    .review-icons {
       display: flex;
-      flex-direction: column;
-      gap: 12px;
+      justify-content: center;
+      gap: 36px;
       align-items: center;
     }
-    .review-btn {
-      display: inline-block;
-      background: #c9a227;
-      color: #0f172a;
-      padding: 12px 28px;
-      border-radius: 8px;
+    .review-icons a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-decoration: none;
-      font-weight: 600;
-      min-width: 240px;
+      color: #cbd5e1;
+      font-size: 0.95rem;
+      gap: 10px;
     }
-    .review-btn:hover {
-      background: #e2c98a;
+    .review-icons a:hover {
+      color: #e2c98a;
     }
-    .review-btn.tripadvisor {
-      background: #34e0a1;
-      color: #0f172a;
-    }
-    .review-btn.tripadvisor:hover {
-      background: #2bc48a;
+    .review-icons img {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
     }
     .form-group {
       margin-bottom: 16px;
@@ -203,12 +200,6 @@
         height: 230px;
       }
     }
-    @media (min-width: 500px) {
-      .review-buttons {
-        flex-direction: row;
-        justify-content: center;
-      }
-    }
   </style>
 </head>
 <body>
@@ -243,19 +234,6 @@
         In front of Adams Hotel, the square with the green benches
         (<a href="https://maps.app.goo.gl/oYsQuUGyfdrJk3nK9" target="_blank">Thalou 2, Athens 105 58</a>)
       </p>
-    </div>
-
-    <div class="reviews">
-      <h2>Reviews</h2>
-      <p>If you enjoyed the walk, a short review helps a lot.</p>
-      <div class="review-buttons">
-        <a href="https://g.page/r/CUDIwuCTM1gOEBM/review" target="_blank" class="review-btn">
-          Leave a Google Review
-        </a>
-        <a href="https://www.tripadvisor.com/UserReviewEdit-g189400-d33064680-The_Hidden_Gem_Tour_Acropolis-Athens_Attica.html" target="_blank" class="review-btn tripadvisor">
-          Leave a TripAdvisor Review
-        </a>
-      </div>
     </div>
 
     <div class="booking">
@@ -305,6 +283,21 @@
 
         <button type="submit" class="submit-btn" id="submitBtn">Send Booking Request</button>
       </form>
+    </div>
+
+    <div class="reviews">
+      <h2>Reviews</h2>
+      <p>See what others say about the tour</p>
+      <div class="review-icons">
+        <a href="https://g.page/r/CUDIwuCTM1gOEBM" target="_blank">
+          <img src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="Google Reviews">
+          Google
+        </a>
+        <a href="https://www.tripadvisor.com/Attraction_Review-g189400-d33064680-Reviews-The_Hidden_Gem_Tour_Acropolis-Athens_Attica.html" target="_blank">
+          <img src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg" alt="TripAdvisor Reviews">
+          TripAdvisor
+        </a>
+      </div>
     </div>
   </div>
 
