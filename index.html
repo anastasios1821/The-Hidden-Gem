@@ -99,13 +99,14 @@
     }
     .reviews p {
       color: #cbd5e1;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
     }
     .review-icons {
       display: flex;
       justify-content: center;
-      gap: 36px;
+      gap: 32px;
       align-items: center;
+      flex-wrap: wrap;
     }
     .review-icons a {
       display: flex;
@@ -113,15 +114,16 @@
       align-items: center;
       text-decoration: none;
       color: #cbd5e1;
-      font-size: 0.95rem;
-      gap: 10px;
+      font-size: 0.9rem;
+      gap: 8px;
     }
     .review-icons a:hover {
       color: #e2c98a;
     }
-    .review-icons img {
-      width: 56px;
-      height: 56px;
+    .review-icons img,
+    .review-icons svg {
+      width: 52px;
+      height: 52px;
       object-fit: contain;
     }
     .form-group {
@@ -287,15 +289,26 @@
 
     <div class="reviews">
       <h2>Reviews</h2>
-      <p>See what others say about the tour</p>
+      <p>See what others say about the tour · 500+ reviews</p>
       <div class="review-icons">
         <a href="https://g.page/r/CUDIwuCTM1gOEBM" target="_blank">
           <img src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="Google Reviews">
           Google
         </a>
         <a href="https://www.tripadvisor.com/Attraction_Review-g189400-d33064680-Reviews-The_Hidden_Gem_Tour_Acropolis-Athens_Attica.html" target="_blank">
-          <img src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg" alt="TripAdvisor Reviews">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="TripAdvisor">
+            <circle cx="12" cy="12" r="12" fill="#34E0A1"/>
+            <circle cx="8.2" cy="11.2" r="2.4" fill="#1A2B32"/>
+            <circle cx="15.8" cy="11.2" r="2.4" fill="#1A2B32"/>
+            <circle cx="8.2" cy="11.2" r="1" fill="#fff"/>
+            <circle cx="15.8" cy="11.2" r="1" fill="#fff"/>
+            <path d="M7 15.5c1.2 1.3 2.9 2.1 5 2.1s3.8-.8 5-2.1" fill="none" stroke="#1A2B32" stroke-width="1.4" stroke-linecap="round"/>
+          </svg>
           TripAdvisor
+        </a>
+        <a href="https://www.guruwalk.com/walks/52577-hidden-gem-of-acropolis-scenic-beauty-history-philoshophy-tips" target="_blank">
+          <img src="https://www.guruwalk.com/favicon.ico" alt="GuruWalk Reviews" style="border-radius: 10px;">
+          GuruWalk
         </a>
       </div>
     </div>
